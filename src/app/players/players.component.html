@@ -1,0 +1,35 @@
+<link
+  href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+
+#submit{
+    font-family: "Source Code Pro", monospace;
+}
+    h1{
+        font-family: "Source Code Pro", monospace;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+<div>
+    <h1>PLAYERS <button type="button" class="btn btn-primary" id="submit" (click)="submitTeam()"
+      *ngIf="flag"  >Submit Team</button></h1>
+    <hr/>
+    <div class="row">
+    <div  *ngFor="let player of players"  class="col-md-5" style="margin-left:70px">
+    <player-thumbnail [player]="player" (member)='added($event)'></player-thumbnail>
+    </div>
+    </div>
+    </div>
+    
+

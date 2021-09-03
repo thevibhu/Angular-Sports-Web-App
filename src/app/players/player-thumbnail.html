@@ -1,0 +1,29 @@
+<link
+  href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500&display=swap"
+  rel="stylesheet"
+/>
+<style>
+
+    div,button{
+        font-family: "Source Code Pro", monospace;
+    }
+</style>
+
+
+
+
+
+
+<div class="well hoverwell thumbnail">
+  <div>
+      <img src="{{player.imageUrl}}" alt="{{player.name}}" style="width: 100px; height: 100px;">
+  </div>
+  <div>{{player.id}}</div>
+  <div>{{player.name}}</div>
+  <div>{{player.role}}</div>
+  <button type="button" class="btn btn-default" (click)="getDetails()" *ngIf="flag">Details</button>
+  <button type="button" class="btn btn-primary" (click)="addToTeam()" *ngIf="flag2">Add to Team</button>
+
+
+
+</div>
